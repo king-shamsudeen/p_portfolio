@@ -12,16 +12,17 @@ amily=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
---ink: #141414;
---sand: #F7F3EE;
---clay: #C4633A;
---clay-light: #E8C3A8;
---clay-pale: #FBF0E8;
---slate: #4A4A4A;
---rule: #E0D8CE;
---white: #FFFFFF;
---font-display: 'Playfair Display', Georgia, serif;
---font-body: 'DM Sans', system-ui, sans-serif;
+  --ink: #172B4D;
+  --sand: #F4F7FB;
+  --clay: #3977C3;
+  --clay-light: #B7D5F5;
+  --clay-pale: #E7F0FC;
+  --slate: #4B5C73;
+  --rule: #D8E1EE;
+  --white: #FFFFFF;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
 }
 html { scroll-behavior: smooth; }
 body {
@@ -555,6 +556,89 @@ section { padding: 3.5rem 1.2rem; }
 @media (prefers-reduced-motion: reduce) {
 *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+
+/* Blue palette refinements */
+
+.nav-cta:hover {
+  background: #285D9E;
+}
+
+.btn-primary:hover {
+  background: #285D9E;
+}
+
+.btn-outline:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.portrait-bg-block {
+  background: var(--clay);
+}
+
+.portrait-placeholder {
+  background: linear-gradient(
+    160deg,
+    #E7F0FC 0%,
+    #B7D5F5 55%,
+    #3977C3 100%
+  );
+  color: var(--ink);
+}
+
+.portrait-caption {
+  color: var(--ink);
+}
+
+.portrait-badge {
+  background: var(--ink);
+  color: var(--white);
+}
+
+#skills {
+  background: var(--ink);
+}
+
+.skill-pill:hover {
+  background: rgba(57, 119, 195, 0.2);
+  border-color: var(--clay);
+}
+
+#portfolio {
+  background: var(--clay-pale);
+}
+
+.portfolio-thumb {
+  background: linear-gradient(
+    135deg,
+    var(--clay-light),
+    var(--clay)
+  );
+}
+
+.portfolio-note {
+  border-left-color: var(--clay);
+}
+
+.edu-card {
+  background: var(--clay-pale);
+}
+
+#contact {
+  background: var(--ink);
+}
+
+.contact-pill:hover,
+.contact-social-icon:hover {
+  background: var(--clay);
+  border-color: var(--clay);
+}
+
+footer {
+  color: rgba(23, 43, 77, 0.55);
+}
+
 </style>
 </head>
 <body>
@@ -585,7 +669,7 @@ empathy, clarity, and a scroll-stopping touch.
 <a href="#contact" class="btn btn-outline">Get In Touch</a>
 </div>
 <div class="hero-socials">
-<a href="#" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
+<a href="https://www.linkedin.com/in/osinimu-ajayi-b14442362" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447
 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136
 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37
@@ -595,21 +679,45 @@ empathy, clarity, and a scroll-stopping touch.
 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222
 0h.003z"/></svg>
 </a>
-<a href="#" class="social-icon" title="Instagram" aria-label="Instagram">
-<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012
-4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012
-3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204
-0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849
-0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069
-4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0
-8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24
-12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618
-6.979-6.98.059-1.28.073-1.689.073-4.948
-0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12
-0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0
-010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+
+<a href="https://www.instagram.com/oseenimu/"
+   class="social-icon"
+   title="My Instagram"
+   aria-label="My Instagram"
+   target="_blank"
+   rel="noopener noreferrer">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07
+    3.252.148 4.771 1.691 4.919 4.919.058
+    1.265.069 1.645.069 4.849 0 3.205-.012
+    3.584-.069 4.849-.149 3.225-1.664
+    4.771-4.919 4.919-1.266.058-1.644.07
+    -4.85.07-3.204 0-3.584-.012-4.849-.07
+    -3.26-.149-4.771-1.699-4.919-4.92
+    -.058-1.265-.07-1.644-.07-4.849
+    0-3.204.013-3.583.07-4.849.149-3.227
+    1.664-4.771 4.919-4.919 1.266-.057
+    1.645-.069 4.849-.069zM12 0C8.741 0
+    8.333.014 7.053.072 2.695.272.273
+    2.69.073 7.052.014 8.333 0 8.741
+    0 12c0 3.259.014 3.668.072 4.948
+    .2 4.358 2.618 6.78 6.98 6.98
+    C8.333 23.986 8.741 24 12 24c3.259
+    0 3.668-.014 4.948-.072 4.354-.2
+    6.782-2.618 6.979-6.98.059-1.28
+    .073-1.689.073-4.948 0-3.259-.014
+    -3.667-.072-4.947-.196-4.354
+    -2.617-6.78-6.979-6.98C15.668.014
+    15.259 0 12 0zm0 5.838a6.162
+    6.162 0 100 12.324 6.162 6.162
+    0 000-12.324zM12 16a4 4 0 110-8
+    4 4 0 010 8zm6.406-11.845a1.44
+    1.44 0 100 2.881 1.44 1.44 0
+    000-2.881z"/>
+  </svg>
 </a>
-<a href="#" class="social-icon" title="TikTok" aria-label="TikTok">
+
+<a href="https://www.tiktok.com/@oseenimu?_r=1&_t=ZS-9AloCWXl1Qj" class="social-icon" title="TikTok" aria-label="TikTok">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01
 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24
 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08
@@ -620,7 +728,7 @@ empathy, clarity, and a scroll-stopping touch.
 3.02 3.5 2.87 1.12-.01 2.19-.66
 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
 </a>
-<a href="#" class="social-icon" title="Twitter/X" aria-label="Twitter">
+<a href="https://x.com/osineemu?s=11" class="social-icon" title="Twitter/X" aria-label="Twitter">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26
 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.26
 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -763,67 +871,158 @@ empathetic support.</li>
 </div>
 </section>
 <hr class="section-divider">
+
+
 <!-- PORTFOLIO -->
 <section id="portfolio">
-<div class="section-label">Featured Work</div>
-<div class="section-title">Content Samples</div>
-<div class="portfolio-grid">
+    <div class="section-label">Featured Work</div>
+
+    
 <div class="portfolio-card">
-<div class="portfolio-thumb">
-<video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;">
-<source src="VIDEO-2026-06-03-18-07-37.mp4" type="video/mp4">
-<div class="portfolio-thumb-placeholder">
-<div class="play-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M8
-5v14l11-7z"/></svg></div>
-<span class="portfolio-tag">Video</span>
+  <a
+    href="https://www.instagram.com/lunamedspa_ng/"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="text-decoration: none; color: inherit;"
+  >
+    <div class="portfolio-thumb">
+      <div class="portfolio-thumb-placeholder">
+        <div class="play-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+        <div class="portfolio-tag">Social Media Management</div>
+      </div>
+    </div>
+    <div class="portfolio-info">
+      <h3>Luna Medspa</h3>
+      <p>
+        Company Instagram account managed as part of my
+        social media and content creation work.
+        <br><br>
+        <strong style="color: var(--clay);">
+          View Instagram Profile ↗
+        </strong>
+      </p>
+    </div>
+  </a>
 </div>
-</video>
-</div>
-<div class="portfolio-info">
-<h3>Content Sample #1</h3>
-<p>Short-form video content created for social media engagement.</p>
-</div>
-</div>
-<div class="portfolio-card">
-<div class="portfolio-thumb">
-<video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;">
-<source src="VIDEO-2026-06-03-18-07-36.mp4" type="video/mp4">
-<div class="portfolio-thumb-placeholder">
-<div class="play-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M8
-5v14l11-7z"/></svg></div>
-<span class="portfolio-tag">Video</span>
-</div>
-</video>
-</div>
-<div class="portfolio-info">
-<h3>Content Sample #2</h3>
-<p>Creative storytelling through mobile-produced video content.</p>
-</div>
-</div>
-<div class="portfolio-card">
-<div class="portfolio-thumb" style="cursor: pointer;" onclick="this.innerHTML='<div class=\'portfolio-thumb-placeholder\'><div class=\'play-icon\'><svg viewBox=\'0 0 24 24\'fill=\'white\'><path d=\'M8 5v14l11-7z\'/></svg></div><span class=\'portfolio-tag\'>Add YourWork</span></div>'">
-<div class="portfolio-thumb-placeholder" style="background: linear-gradient(135deg,
-#d4956e, #8B3A1A);">
-<div class="play-icon" style="background: rgba(255,255,255,0.2); border: 2px dashed
-rgba(255,255,255,0.5);">
-<svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M12 5v14M5
-12h14"/></svg>
-</div>
-<span class="portfolio-tag">+ Add Work Sample</span>
-</div>
-</div>
-<div class="portfolio-info">
-<h3>More Coming Soon</h3>
-<p>Campaign graphics, Canva designs, and social posts — link or attach additional work
-here.</p>
-</div>
-</div>
-</div>
-<div class="portfolio-note">
-💡 <strong>Want to see more?</strong> Reach out via the contact section below and I'll
-share a full portfolio including Canva designs, campaign materials, and social media analytics.
-</div>
+
+    <div class="section-title">Content Samples</div>
+
+    <div class="portfolio-grid">
+
+        <!-- VIDEO 1 -->
+        <div class="portfolio-card">
+            <div class="portfolio-thumb">
+                <video controls preload="metadata" playsinline
+                       style="width:100%;height:100%;object-fit:contain;">
+                    <source src="./priscilla%20samples/sample%2010.MP4"
+                            type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+            </div>
+            <div class="portfolio-info">
+                <h3>Content Sample #1</h3>
+                <p>Short-form video content created for social media engagement.</p>
+            </div>
+        </div>
+
+        <!-- VIDEO 2 -->
+        <div class="portfolio-card">
+            <div class="portfolio-thumb">
+                <video controls preload="metadata" playsinline
+                       style="width:100%;height:100%;object-fit:contain;">
+                    <source src="./priscilla%20samples/sample%205.MP4"
+                            type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+            </div>
+            <div class="portfolio-info">
+                <h3>Content Sample #2</h3>
+                <p>Creative storytelling through mobile-produced video content.</p>
+            </div>
+        </div>
+
+        <!-- VIDEO 3 -->
+        <div class="portfolio-card">
+            <div class="portfolio-thumb">
+                <video controls preload="metadata" playsinline
+                       style="width:100%;height:100%;object-fit:contain;">
+                    <source src="./priscilla%20samples/sample%203.MP4"
+                            type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+            </div>
+            <div class="portfolio-info">
+                <h3>Content Sample #3</h3>
+                <p>Video production showcasing creativity and visual storytelling.</p>
+            </div>
+        </div>
+
+        <!-- VIDEO 4 -->
+        <div class="portfolio-card">
+            <div class="portfolio-thumb">
+                <video controls preload="metadata" playsinline
+                       style="width:100%;height:100%;object-fit:contain;">
+                    <source src="./priscilla%20samples/sample%209.MP4"
+                            type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+            </div>
+            <div class="portfolio-info">
+                <h3>Content Sample #4</h3>
+                <p>Engaging video content designed for digital platforms.</p>
+            </div>
+        </div>
+
+        <!-- VIDEO 5 -->
+        <div class="portfolio-card">
+            <div class="portfolio-thumb">
+                <video controls preload="metadata" playsinline
+                       style="width:100%;height:100%;object-fit:contain;">
+                    <source src="./priscilla%20samples/sample%208.MP4"
+                            type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+            </div>
+            <div class="portfolio-info">
+                <h3>Content Sample #5</h3>
+                <p>More creative work from my content creation portfolio.</p>
+            </div>
+        </div>
+
+        
+        <!-- VIDEO 6 — PERSONAL STORYTELLING -->
+        <div class="portfolio-card">
+            <div class="portfolio-thumb">
+                <video controls preload="metadata" playsinline
+                       style="width:100%;height:100%;object-fit:contain;">
+                    <source src="./priscilla%20samples/sample%207.MP4"
+                            type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+            </div>
+            <div class="portfolio-info">
+                <h3>Content Sample #6 — Personal Storytelling</h3>
+                <p>
+                    A personal storytelling video showcasing authentic
+                    expression, creative storytelling, and the ability
+                    to connect with an audience through relatable content.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="portfolio-note">
+        <strong>Want to see more?</strong>
+        Reach out via the contact section below to explore more of my
+        content, campaign materials, and social media work.
+    </div>
 </section>
+
 <!-- CERTIFICATIONS -->
 <section id="certifications">
 <div class="section-label">Credentials</div>
